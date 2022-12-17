@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="Images/favcon.map.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css">
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet"/>
+    <title>Where in the world? - Look for any country around the world!</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <h1 class="header__nav-heading bolder-text">
+            <i class="bx bx-map"></i>
+            Where in The world?
+          </h1>
+          <div>
+            <button id="open-menu" class="header__nav-menu">
+              <i class="bx bx-menu bx-sm"></i>
+            </button>
+            
+            <button
+              type="button"
+              data-mode="light"
+              class="header__nav-button-mode bold-text mode">
+              <i class="bx bx-moon bx-fw">
+                Dark Mode
+              </i>
+            </button>
+          </div>
+
+          <div class="header__nav-menu-toggle">
+            <ul class="header__nav-menu-list">
+              <li class="header__nav-menu-item">
+                <i id="close-menu" class="bx bx-x bx-sm"></i>
+              </li>
+              <li>
+                <a href="#" data-mode="light" class="mode"
+                  ><i class="bx bx-moon bx-fw"></i> Dark Mode</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="index-main">
+      <div class="container">
+        <div class="index-main__search-filter-container">
+          <div class="index-main__search-container">
+            <i class="bx bx-search index-main__search-icon"></i>
+            <input
+              type="text"
+              class="index-main__search-input"
+              placeholder="Search for a country..."
+            />
+          </div>
+          <div class="index-main__filter-container">
+            <button
+              id="dropdown-btn"
+              class="index-main__filter-button bold-text"
+            >
+              Filter by Region
+              <i
+                class="bx bx-chevron-down bx-fw index-main__filter-button-icon"
+              ></i>
+            </button>
+            <div id="dropdown" class="index-main__dropdown hide">
+              <ul class="index-main__dropdown-list">
+                <li class="index-main__dropdown-list-item">Africa</li>
+                <li class="index-main__dropdown-list-item">Americas</li>
+                <li class="index-main__dropdown-list-item">Asia</li>
+                <li class="index-main__dropdown-list-item">Europe</li>
+                <li class="index-main__dropdown-list-item">Oceania</li>
+                <li class="index-main__dropdown-list-item">None</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="index-main__countries-container">
+          <div class="fetch-error hide"></div>
+          <div class="index-main__loading-countries hide"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/main1.js" defer></script>
+  </body>
+</html>
